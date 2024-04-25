@@ -1,10 +1,11 @@
 process.stdin.setEncoding('utf8');
 process.stdin.on('data', data => {
-    const n = data.split(" ");
-    const a = Number(n[0]), b = Number(n[1]);
+    const base = data.split(" ");
+    const n = Number(base[0]);
+    const m = Number(base[1]);
     
-    const line = '*'.repeat(a);
-    for(let i=0 ; i < b ; i++){
+    const line = '*'.repeat(n);
+    for(let i=0 ; i < m ; i++){
         console.log(line);
     }
 });
