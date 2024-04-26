@@ -1,16 +1,10 @@
 function solution(n, m) {
-    var answer = [];
-    
     // 최소공배수 = a * b / 최대공약수
     const nDivisors = getDivisors(n);
-    const mDivisors = getDivisors(m);
-    const divisors = mDivisors.filter(value=> nDivisors.indexOf(value) !== -1);
-    answer[0] = Math.max(...divisors);
+    const divisors = getDivisors(m).filter(value => nDivisors.indexOf(value) !== -1);
+    const 최대공약수 = Math.max(...divisors);
     
-    // 공배수 구하기
-    answer[1] = n*m / answer[0];
-    
-    return answer;
+    return [최대공약수, n*m/최대공약수];
 }
 
 function getDivisors(number){
