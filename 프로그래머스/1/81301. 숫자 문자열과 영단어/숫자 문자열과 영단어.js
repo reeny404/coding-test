@@ -1,11 +1,12 @@
-const words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+
 
 function solution(s) {
-    let answer = '';
+    const words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
     
+    let answer = '';    
     for(let i=0, keyword = ''; i < s.length ; i++) {
         const char = s[i];
-        if (!isNaN(Number(char))){
+        if (!isNaN(parseInt(char))){
             answer += char + '';
             continue;
         }
