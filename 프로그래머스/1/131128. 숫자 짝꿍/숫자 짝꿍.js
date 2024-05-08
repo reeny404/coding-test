@@ -14,9 +14,12 @@ function solution(X, Y) {
     .map((v) => v.repeat(counts[v]))
     .join("");
 
-  if (resultString[0] === "0") return "0";
-  else if (resultString.length === 0) return "-1";
-  else return resultString;
+  if (resultString.length === 0) {
+    return "-1";
+  } else if (resultString[0] == "0") {
+    return "0";
+  }
+  return resultString;
 }
 
 
